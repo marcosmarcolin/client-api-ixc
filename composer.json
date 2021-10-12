@@ -1,0 +1,21 @@
+{
+  "name": "marcosmarcolin/client-api-ixc",
+  "description": "API Cliente para consumir o IXCProvedor.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcos Marcolin",
+      "email": "marcos@ixcsoft.com.br"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.3",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "IXClientAPI\\": "src/"
+    }
+  }
+}
