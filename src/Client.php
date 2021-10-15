@@ -2,7 +2,8 @@
 
 namespace IXClientAPI;
 
-use IXClientAPI\HttpClient\CurlRequest;
+use GuzzleHttp\Exception\GuzzleException;
+use IXClientAPI\HttpClient\RequestClient;
 
 class Client
 {
@@ -73,74 +74,54 @@ class Client
         $this->method = $method;
     }
 
-    /**
-     * @return array
-     */
     public function getParams(): array
     {
         return $this->params;
     }
 
-    /**
-     * @param array $params
-     */
     public function setParams(array $params): void
     {
         $this->params = $params;
     }
 
-    /**
-     * @return int
-     */
     public function getRegister(): int
     {
         return $this->register;
     }
 
-    /**
-     * @param int $register
-     */
     public function setRegister(int $register): void
     {
         $this->register = $register;
     }
 
-    /**
-     * @return bool
-     */
     public function isResponseArray(): bool
     {
         return $this->responseArray;
     }
 
-    /**
-     * @param bool $responseArray
-     */
     public function setResponseArray(bool $responseArray): void
     {
         $this->responseArray = $responseArray;
     }
 
-    /**
-     * @return bool
-     */
     public function isList(): bool
     {
         return $this->list;
     }
 
-    /**
-     * @param bool $list
-     */
     public function setList(bool $list): void
     {
         $this->list = $list;
     }
 
+    /**
+     * @throws GuzzleException
+     */
     public function run()
     {
-        $CurlRequest = new CurlRequest();
+        $CurlRequest = new RequestClient();
         $CurlRequest->setClient($this);
+        $CurlRequest->setData();
         return $CurlRequest->request();
     }
 }

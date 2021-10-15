@@ -3,15 +3,15 @@
 /* Deletar */
 
 use IXClientAPI\Client;
-use IXClientAPI\HttpClient\CurlRequest;
+use IXClientAPI\HttpClient\RequestClient;
 
 require_once '../vendor/autoload.php';
 
 try {
     $Client = new Client('usuarios', 'https://HOST', true);
-    $Client->setMethod(CurlRequest::DELETE);
+    $Client->setMethod(RequestClient::DELETE);
     $Client->setToken('Token');
-    $Client->setRegister(30);
+    $Client->setRegister(0);
     $response = $Client->run();
     echo '<pre>';
     var_dump($response);

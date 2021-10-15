@@ -3,13 +3,13 @@
 /* Atualizar */
 
 use IXClientAPI\Client;
-use IXClientAPI\HttpClient\CurlRequest;
+use IXClientAPI\HttpClient\RequestClient;
 
 require_once '../vendor/autoload.php';
 
 try {
     $Client = new Client('usuarios', 'https://HOST', true);
-    $Client->setMethod(CurlRequest::PUT);
+    $Client->setMethod(RequestClient::PUT);
     $Client->setToken('28:fabf2d13ff9fad48dc6838293dfd83bc31cd7d52eefa798c89b73359856ed81d');
     $Client->setRegister(0);
     $Client->setParams(

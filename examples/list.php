@@ -3,14 +3,14 @@
 /* Listar */
 
 use IXClientAPI\Client;
-use IXClientAPI\HttpClient\CurlRequest;
+use IXClientAPI\HttpClient\RequestClient;
 
 require_once '../vendor/autoload.php';
 
 try {
     $Client = new Client('usuarios', 'https://HOST', true);
     $Client->setList(true);
-    $Client->setMethod(CurlRequest::POST);
+    $Client->setMethod(RequestClient::POST);
     $Client->setToken('Token');
     $response = $Client->run();
     var_dump($response);
