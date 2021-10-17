@@ -2,10 +2,13 @@
 
 ### Em desenvolvimento
 
+Rotas e recursos implementados baseados na [Wiki API do IXCProvedor](https://wikiapiprovedor.ixcsoft.com.br).
+
 ## Rotas
 
 Exemplos completos no diretório `examples/routes`.
 
+Listar dados pela rota
 ~~~php
 use IXClientAPI\Client;
 use IXClientAPI\HttpClient\RequestClient;
@@ -28,14 +31,15 @@ try {
 
 Exemplos completos no diretório `examples/resources`.
 
+Listar clientes por CPF
 ~~~php
+use GuzzleHttp\Exception\GuzzleException;
 use IXClientAPI\HttpClient\RequestClient;
 use IXClientAPI\Resources\Cliente\ClienteResource;
 use IXClientAPI\Resources\Resources;
 
 require_once 'vendor/autoload.php';
 
-/* Listagem de clientes por CPF */
 try {
     $ClientResource = new ClienteResource(Resources::LISTAR_CLIENTE_POR_CPF, 'https://HOST', true);
     $ClientResource->setList(true);
@@ -53,13 +57,11 @@ try {
     $ClientResource->setResponseArray(true);
     $clientes = $ClientResource->run();
     var_dump($clientes);
-} catch (\GuzzleHttp\Exception\GuzzleException $exception) {
+} catch (GuzzleException $exception) {
     var_dump($exception->getMessage());
 }
 ~~~
 
-### Contribua 
-
-### Dúvidas ou sugestões
+### Contribuições, dúvidas ou sugestões
 
 marcos@ixcsoft.com.br
