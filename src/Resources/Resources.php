@@ -2,7 +2,11 @@
 
 namespace IXClientAPI\Resources;
 
-abstract class Resources
+use GuzzleHttp\Exception\GuzzleException;
+use IXClientAPI\Client;
+use IXClientAPI\HttpClient\RequestClient;
+
+class Resources
 {
     /* Contrato */
     const PRODUTOS_DO_CONTRATO = ''; // TODO
@@ -57,10 +61,6 @@ abstract class Resources
     const INSERIR_RAMAL_SIP = 'voip_sippeers';
     const LISTAR_REGISTROS_VOIP = 'cdr';
 
-    /* Cliente */
-    const LISTAR_CLIENTE_POR_TELEFONE = 'cliente';
-    const LISTAR_CLIENTE_POR_CPF = 'cliente';
-
     /* Financeiro em Geral */
     const LISTAR_CONTAS = 'contas';
     const LISTAR_PEDIDOS_VENDA = 'vd_pedido_venda';
@@ -71,4 +71,15 @@ abstract class Resources
     const LISTAR_CLIENTES_FIBRA = 'radpop_radio_cliente_fibra';
     const LISTAR_PROJETOS = 'df_projeto';
     const VERIFICAR_VIABILIDADE_TECNICA = 'viabilidade_tecnica';
+
+    /**
+     * @throws GuzzleException
+     */
+    protected function run(Client $Client)
+    {
+        $RequestClient = new RequestClient();
+        $RequestClient->setClient($Client);
+        $RequestClient->setData();
+        return $RequestClient->request();
+    }
 }

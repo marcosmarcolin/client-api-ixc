@@ -21,7 +21,8 @@ try {
             "recebimentos_dia_atual" => "N",
             "lancamentos_dia_atual" => "S",
             "senha" => "123456"
-        ]);
+        ]
+    );
     $response = $Client->run();
     echo '<pre>';
     var_dump($response);

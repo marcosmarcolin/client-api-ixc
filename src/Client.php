@@ -119,9 +119,9 @@ class Client
      */
     public function run()
     {
-        $CurlRequest = new RequestClient();
-        $CurlRequest->setClient($this);
-        $CurlRequest->setData();
-        return $CurlRequest->request();
+        $RequestClient = new RequestClient();
+        $RequestClient->setClient($this);
+        $RequestClient->setData();
+        return $RequestClient->request();
     }
 }

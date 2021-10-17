@@ -3,19 +3,18 @@
 /* Listar cliente por CPF */
 
 use GuzzleHttp\Exception\GuzzleException;
+use IXClientAPI\Client;
 use IXClientAPI\HttpClient\RequestClient;
 use IXClientAPI\Resources\Cliente\ClienteResource;
-use IXClientAPI\Resources\Resources;
 
 require_once '../../vendor/autoload.php';
 
-/* Listagem de clientes por CPF */
 try {
-    $ClientResource = new ClienteResource(Resources::LISTAR_CLIENTE_POR_CPF, 'https://HOST', true);
-    $ClientResource->setList(true);
-    $ClientResource->setMethod(RequestClient::POST);
-    $ClientResource->setToken('seu_token');
-    $ClientResource->setParams([
+    $Client = new Client(ClienteResource::LISTAR_CLIENTE_POR_CPF, 'https://HOST', true);
+    $Client->setList(true);
+    $Client->setMethod(RequestClient::POST);
+    $Client->setToken('seu_token');
+    $Client->setParams([
         'qtype' => 'cnpj_cpf',
         'query' => 'XXX-XXX-XXX-XX',
         'oper' => '=',
@@ -24,10 +23,10 @@ try {
         'sortname' => 'cliente.id',
         'sortorder' => 'desc'
     ]);
-    $ClientResource->setResponseArray(true);
-    $clientes = $ClientResource->run();
-    var_dump($clientes);
+    $Client->setResponseArray(true);
+    $ClienteResource = new ClienteResource($Client);
+    $response = $ClienteResource->getByCPF();
+    var_dump($response);
 } catch (GuzzleException $exception) {
     var_dump($exception->getMessage());
 }
-

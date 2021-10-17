@@ -47,8 +47,8 @@ class RequestAdapter
         $contents = json_decode($this->response->getBody()->getContents(), true);
         $response = json_encode(
             [
-            'code' => $this->response->getStatusCode(),
-            'contents' => $contents
+                'code' => $this->response->getStatusCode(),
+                'contents' => $contents
             ]
         );
         return $returnArray === true ? json_decode($response, true) : $response;
