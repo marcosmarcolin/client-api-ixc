@@ -34,7 +34,11 @@ class RequestAdapter
 
     private function getResponse($returnArray)
     {
-        $response = $this->response->getBody()->getContents();
+        $contents = json_decode($this->response->getBody()->getContents(), true);
+        $response = json_encode([
+            'code' => $this->response->getStatusCode(),
+            'contents' => $contents
+        ]);
         return $returnArray === true ? json_decode($response, true) : $response;
     }
 }

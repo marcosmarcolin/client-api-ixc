@@ -56,7 +56,7 @@ class RequestClient
     {
         $this->configs = [
             'timeout' => 60,
-            'verify' => false
+            'verify' => !$this->getClient()->isSelfSigned()
         ];
     }
 

@@ -5,7 +5,7 @@
 use IXClientAPI\Client;
 use IXClientAPI\HttpClient\RequestClient;
 
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 try {
     $Client = new Client('usuarios', 'https://HOST', true);
