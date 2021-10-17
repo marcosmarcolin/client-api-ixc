@@ -21,7 +21,7 @@ class ClienteResource extends Resources
     /**
      * @throws GuzzleException
      */
-    public function getByCPF()
+    public function execDefault()
     {
         return $this->run($this->Client);
     }

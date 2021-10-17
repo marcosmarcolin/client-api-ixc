@@ -25,7 +25,7 @@ try {
     ]);
     $Client->setResponseArray(true);
     $ClienteResource = new ClienteResource($Client);
-    $response = $ClienteResource->getByCPF();
+    $response = $ClienteResource->execDefault();
     var_dump($response);
 } catch (GuzzleException $exception) {
     var_dump($exception->getMessage());

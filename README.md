@@ -21,7 +21,6 @@ try {
     $Client->setMethod(RequestClient::POST);
     $Client->setToken('seu_token');
     $response = $Client->run();
-    var_dump($response);
 } catch (Exception $exception) {
     var_dump($exception->getMessage());
 }
@@ -56,8 +55,7 @@ try {
     ]);
     $Client->setResponseArray(true);
     $ClienteResource = new ClienteResource($Client);
-    $response = $ClienteResource->getByCPF();
-    var_dump($response);
+    $response = $ClienteResource->execDefault();
 } catch (GuzzleException $exception) {
     var_dump($exception->getMessage());
 }
