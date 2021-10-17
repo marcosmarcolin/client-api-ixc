@@ -62,6 +62,16 @@ try {
 }
 ~~~
 
+### Qualidade de código com Codesniffer
+
+Para analisar:
+
+`php ./vendor/bin/phpcs --extensions=php --standard=rules-code-sniffer.xml src/`
+
+Para analisar e corrigir:
+
+`php ./vendor/bin/phpcbf --extensions=php --standard=rules-code-sniffer.xml src/`
+
 ### Contribuições, dúvidas ou sugestões
 
 marcos@ixcsoft.com.br

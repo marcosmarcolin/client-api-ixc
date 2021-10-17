@@ -12,11 +12,17 @@ class RequestAdapter
     private string $clientUrl;
     private mixed $response;
 
+    /**
+     * @param array $clientConfigs
+     */
     public function setClientConfigs(array $clientConfigs): void
     {
         $this->clientConfigs = $clientConfigs;
     }
 
+    /**
+     * @param array $clientOptions
+     */
     public function setClientOptions(array $clientOptions): void
     {
         $this->clientOptions = $clientOptions;
@@ -32,13 +38,19 @@ class RequestAdapter
         return $this->getResponse($returnArray);
     }
 
-    private function getResponse($returnArray)
+    /**
+     * @param $returnArray
+     * @return mixed
+     */
+    private function getResponse($returnArray): mixed
     {
         $contents = json_decode($this->response->getBody()->getContents(), true);
-        $response = json_encode([
+        $response = json_encode(
+            [
             'code' => $this->response->getStatusCode(),
             'contents' => $contents
-        ]);
+            ]
+        );
         return $returnArray === true ? json_decode($response, true) : $response;
     }
 }
