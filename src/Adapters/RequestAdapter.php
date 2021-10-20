@@ -9,8 +9,7 @@ class RequestAdapter
 {
     private array $clientConfigs;
     private array $clientOptions;
-    private string $clientUrl;
-    private mixed $response;
+    private $response;
 
     /**
      * @param array $clientConfigs
@@ -38,11 +37,7 @@ class RequestAdapter
         return $this->getResponse($returnArray);
     }
 
-    /**
-     * @param $returnArray
-     * @return mixed
-     */
-    private function getResponse($returnArray): mixed
+    private function getResponse($returnArray)
     {
         $contents = json_decode($this->response->getBody()->getContents(), true);
         $response = json_encode(

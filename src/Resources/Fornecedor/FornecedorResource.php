@@ -1,15 +1,14 @@
 <?php
 
-namespace IXClientAPI\Resources\Cliente;
+namespace IXClientAPI\Resources\Fornecedor;
 
 use GuzzleHttp\Exception\GuzzleException;
 use IXClientAPI\Client;
 use IXClientAPI\Resources\Resources;
 
-class ClienteResource extends Resources
+class FornecedorResource extends Resources
 {
-    const LISTAR_CLIENTE_POR_TELEFONE = 'cliente';
-    const LISTAR_CLIENTE_POR_CPF = 'cliente';
+    const CADASTRAR_FORNECEDOR = 'fornecedor';
 
     /**
      * @throws GuzzleException

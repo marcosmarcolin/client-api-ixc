@@ -1,8 +1,17 @@
+## Em desenvolvimento
+
 # Cliente API escrita em PHP para consumir o IXCProvedor
 
-### Em desenvolvimento
-
 Rotas e recursos implementados baseados na [Wiki API do IXCProvedor](https://wikiapiprovedor.ixcsoft.com.br).
+
+### Recursos implementados até o momento
+
+* Cliente
+    * Listar clientes por CPF
+    * Listar clientes por telefone
+* Fornecedor
+    * Cadastrar novo fornecedor
+
 
 ## Rotas
 

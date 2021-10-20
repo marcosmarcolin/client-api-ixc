@@ -8,6 +8,13 @@ use IXClientAPI\HttpClient\RequestClient;
 
 class Resources
 {
+    protected object $Client;
+
+    public function __construct(Client $Client)
+    {
+        $this->Client = $Client;
+    }
+
     /* Contrato */
     const PRODUTOS_DO_CONTRATO = ''; // TODO
     const ALTERAR_STATUS_DE_ACESSO_CONTRATO = 'cliente_contrato_15464';
@@ -27,9 +34,6 @@ class Resources
     const FINALIZAR_OS = 'su_oss_chamado_fechar';
     const INSERIR_COMODATO_AO_FINALIZAR_OS = 'su_oss_mov_comodato_wiz_novo';
     const ENCAMINHAR_OS = 'su_oss_chamado_alterar_setor';
-
-    /* Fornecedor */
-    const CADASTRAR_FORNECEDOR = 'fornecedor';
 
     /* Ticket */
     const INSERIR_ATENDIMENTO = 'su_ticket';

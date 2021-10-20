@@ -7,7 +7,8 @@ use IXClientAPI\Client;
 use IXClientAPI\HttpClient\RequestClient;
 use IXClientAPI\Resources\Cliente\ClienteResource;
 
-require_once '../../vendor/autoload.php';
+$dir = dirname(__DIR__, 3);
+require_once $dir . '/vendor/autoload.php';
 
 try {
     $fone = '(XX) XXXX-XXXX';
