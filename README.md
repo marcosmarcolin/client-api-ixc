@@ -4,6 +4,10 @@
 
 Rotas e recursos implementados baseados na [Wiki API do IXCProvedor](https://wikiapiprovedor.ixcsoft.com.br).
 
+### Rotas implementadas até o momento
+
+Todas disponíveis.
+
 ### Recursos implementados até o momento
 
 * Cliente
