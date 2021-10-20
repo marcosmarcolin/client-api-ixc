@@ -11,7 +11,8 @@ Rotas e recursos implementados baseados na [Wiki API do IXCProvedor](https://wik
     * Listar clientes por telefone
 * Fornecedor
     * Cadastrar novo fornecedor
-
+* Lead
+    * Inserir Lead
 
 ## Rotas
 

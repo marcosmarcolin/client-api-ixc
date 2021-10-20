@@ -58,9 +58,6 @@ class Resources
     const DESCONECTAR_LOGIN = 'desconectar_clientes';
     const LIMPAR_MAC = 'radusuarios_25452';
 
-    /* Lead */
-    const INSERIR_LEAD = 'contato';
-
     /* Telefonia */
     const INSERIR_RAMAL_SIP = 'voip_sippeers';
     const LISTAR_REGISTROS_VOIP = 'cdr';

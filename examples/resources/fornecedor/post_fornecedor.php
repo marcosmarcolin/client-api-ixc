@@ -23,8 +23,8 @@ try {
         "cpf_cnpj" => "XX.XXX.XXX/XXXX-XX"
     ]);
     $Client->setResponseArray(true);
-    $ClienteResource = new FornecedorResource($Client);
-    $response = $ClienteResource->execDefault();
+    $FornecedorResource = new FornecedorResource($Client);
+    $response = $FornecedorResource->execDefault();
     var_dump($response);
 } catch (GuzzleException $exception) {
     var_dump($exception->getMessage());
