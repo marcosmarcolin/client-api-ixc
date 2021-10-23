@@ -1,16 +1,16 @@
 <?php
 
-namespace IXClientAPI\Resources\Cliente;
+namespace IXClientAPI\Resources\Financeiro;
 
 use GuzzleHttp\Exception\GuzzleException;
-use IXClientAPI\Client;
 use IXClientAPI\Interfaces\ResourcesInterface;
 use IXClientAPI\Resources\Resources;
 
-class ClienteResource extends Resources implements ResourcesInterface
+class FinanceiroResource extends Resources implements ResourcesInterface
 {
-    const LISTAR_CLIENTE_POR_TELEFONE = 'cliente';
-    const LISTAR_CLIENTE_POR_CPF = 'cliente';
+    const LISTAR_CONTAS = 'contas';
+    const LISTAR_PEDIDOS_VENDA = 'vd_pedido_venda';
+    const IMPRIMIR_NOTA = 'imprimir_nota';
 
     /**
      * @throws GuzzleException

@@ -17,12 +17,22 @@ Todas disponíveis.
     * Cadastrar novo fornecedor
 * Lead
     * Inserir Lead
+* Processo
+    * Inserir tarefa
+* Financeiro
+    * Listar contas
+    * Listar pedidos de venda
+    * Imprimir nota
+* Logins
+    * Limpar Mac
+    * Desconectar clientes
 
 ## Rotas
 
 Exemplos completos no diretório `examples/routes`.
 
 Listar dados pela rota
+
 ~~~php
 use IXClientAPI\Client;
 use IXClientAPI\HttpClient\RequestClient;
@@ -45,6 +55,7 @@ try {
 Exemplos completos no diretório `examples/resources`.
 
 Listar clientes por CPF
+
 ~~~php
 use GuzzleHttp\Exception\GuzzleException;
 use IXClientAPI\Client;

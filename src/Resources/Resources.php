@@ -51,21 +51,9 @@ class Resources
     const RECEBER_TITULO = 'fn_areceber_recebimentos_baixas_novo';
     const RETORNAR_ARQUIVO_DE_BOLETO = 'get_boleto';
 
-    /* Processo */
-    const INSERIR_TAREFA_EM_PROCESSO = 'wfl_tarefa';
-
-    /* Login */
-    const DESCONECTAR_LOGIN = 'desconectar_clientes';
-    const LIMPAR_MAC = 'radusuarios_25452';
-
     /* Telefonia */
     const INSERIR_RAMAL_SIP = 'voip_sippeers';
     const LISTAR_REGISTROS_VOIP = 'cdr';
-
-    /* Financeiro em Geral */
-    const LISTAR_CONTAS = 'contas';
-    const LISTAR_PEDIDOS_VENDA = 'vd_pedido_venda';
-    const IMPRIMIR_NOTA = 'imprimir_nota';
 
     /* Rede em Geral */
     const LISTAR_OCORRENCIAS_SOLUCOES = 'radpop_ocorrencias';

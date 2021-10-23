@@ -1,16 +1,14 @@
 <?php
 
-namespace IXClientAPI\Resources\Cliente;
+namespace IXClientAPI\Resources\Processo;
 
 use GuzzleHttp\Exception\GuzzleException;
-use IXClientAPI\Client;
 use IXClientAPI\Interfaces\ResourcesInterface;
 use IXClientAPI\Resources\Resources;
 
-class ClienteResource extends Resources implements ResourcesInterface
+class ProcessoResource extends Resources implements ResourcesInterface
 {
-    const LISTAR_CLIENTE_POR_TELEFONE = 'cliente';
-    const LISTAR_CLIENTE_POR_CPF = 'cliente';
+    const INSERIR_TAREFA_EM_PROCESSO = 'wfl_tarefa';
 
     /**
      * @throws GuzzleException

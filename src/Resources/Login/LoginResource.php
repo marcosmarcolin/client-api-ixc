@@ -1,16 +1,15 @@
 <?php
 
-namespace IXClientAPI\Resources\Cliente;
+namespace IXClientAPI\Resources\Login;
 
 use GuzzleHttp\Exception\GuzzleException;
-use IXClientAPI\Client;
 use IXClientAPI\Interfaces\ResourcesInterface;
 use IXClientAPI\Resources\Resources;
 
-class ClienteResource extends Resources implements ResourcesInterface
+class LoginResource extends Resources implements ResourcesInterface
 {
-    const LISTAR_CLIENTE_POR_TELEFONE = 'cliente';
-    const LISTAR_CLIENTE_POR_CPF = 'cliente';
+    const LIMPAR_MAC = 'radusuarios_25452';
+    const DESCONECTAR_LOGIN = 'desconectar_clientes';
 
     /**
      * @throws GuzzleException
