@@ -51,10 +51,6 @@ class Resources
     const RECEBER_TITULO = 'fn_areceber_recebimentos_baixas_novo';
     const RETORNAR_ARQUIVO_DE_BOLETO = 'get_boleto';
 
-    /* Telefonia */
-    const INSERIR_RAMAL_SIP = 'voip_sippeers';
-    const LISTAR_REGISTROS_VOIP = 'cdr';
-
     /* Rede em Geral */
     const LISTAR_OCORRENCIAS_SOLUCOES = 'radpop_ocorrencias';
     const LISTAR_CLIENTES_FIBRA = 'radpop_radio_cliente_fibra';

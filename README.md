@@ -26,6 +26,9 @@ Todas disponíveis.
 * Logins
     * Limpar Mac
     * Desconectar clientes
+* Telefonia
+    * Inserir ramal
+    * Listar registros de chamadas VoIP
 
 ## Rotas
 
