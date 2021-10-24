@@ -42,12 +42,6 @@ class Resources
     const INSERIR_INTERACAO_EM_ATENDIMENTO = 'su_mensagens';
     const TRANSFERIR_ATENDIMENTO = 'su_transf_atendimento_26466';
 
-    /* Recebimento */
-    const ENVIAR_BOLETO_POR_EMAIL = 'get_boleto';
-    const ENVIAR_BOLETO_POR_SMS = 'get_boleto';
-    const RECEBER_TITULO = 'fn_areceber_recebimentos_baixas_novo';
-    const RETORNAR_ARQUIVO_DE_BOLETO = 'get_boleto';
-
     /* Rede em Geral */
     const LISTAR_OCORRENCIAS_SOLUCOES = 'radpop_ocorrencias';
     const LISTAR_CLIENTES_FIBRA = 'radpop_radio_cliente_fibra';

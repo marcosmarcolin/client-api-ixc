@@ -26,6 +26,10 @@ Todas disponíveis.
     * Consultar dados do Boleto
     * Listar boletos abertos
     * Consultar boletos pagos por data
+    * Receber título
+    * Retornar arquivo do Boleto
+    * Enviar boleto por email
+    * Enviar boleto por SMS
 * Logins
     * Limpar Mac
     * Desconectar clientes
