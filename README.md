@@ -23,6 +23,9 @@ Todas disponíveis.
     * Listar contas
     * Listar pedidos de venda
     * Imprimir nota
+    * Consultar dados do Boleto
+    * Listar boletos abertos
+    * Consultar boletos pagos por data
 * Logins
     * Limpar Mac
     * Desconectar clientes

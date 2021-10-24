@@ -4,12 +4,15 @@ namespace IXClientAPI\Adapters;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use IXClientAPI\Utils\JsonUtil;
 
 class RequestAdapter
 {
     private array $clientConfigs;
     private array $clientOptions;
     private $response;
+
+    const ERROR_API_JSON = ['type' => 'error', 'message' => 'Erro ao ler retorno da API!'];
 
     /**
      * @param array $clientConfigs
@@ -39,7 +42,15 @@ class RequestAdapter
 
     private function getResponse($returnArray)
     {
-        $contents = json_decode($this->response->getBody()->getContents(), true);
+        $contents = trim($this->response->getBody()->getContents());
+        if (JsonUtil::isJson($contents) === true) {
+            $contents = json_decode($contents, true);
+        }
+
+        if (! is_array($contents)) {
+            $contents = self::ERROR_API_JSON;
+        }
+
         $response = json_encode(
             [
                 'code' => $this->response->getStatusCode(),
