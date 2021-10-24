@@ -49,7 +49,11 @@ class RequestClient
         $RequestAdapter = new RequestAdapter();
         $RequestAdapter->setClientConfigs($this->configs);
         $RequestAdapter->setClientOptions($this->options);
-        return $RequestAdapter->exec($this->url, $this->getClient()->getMethod(), $this->getClient()->isResponseArray());
+        return $RequestAdapter->exec(
+            $this->url,
+            $this->getClient()->getMethod(),
+            $this->getClient()->isResponseArray()
+        );
     }
 
     private function setConfigs()
